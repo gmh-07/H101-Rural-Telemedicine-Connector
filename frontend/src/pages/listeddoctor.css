@@ -90,3 +90,24 @@
 .listed-page {
   font-weight: bold;
 }
+
+
+
+.listed-card-btn {
+  display: inline-block;
+  text-align: center;
+  background: #0077ff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.listed-card-btn:hover {
+  background: #005fcc;
+  transform: scale(1.05);
+}
