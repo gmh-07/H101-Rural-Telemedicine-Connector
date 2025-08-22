@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Navbar from "@/components/navbar";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -7,7 +7,7 @@ import "./AI.css";
 const AI = () => {
   const mapRef = useRef(null);
   const mapInstance = useRef(null);
-  const [marker, setMarker] = useState(null);
+  const markerRef = useRef(null);
 
   useEffect(() => {
     if (mapRef.current && !mapInstance.current) {
@@ -20,18 +20,27 @@ const AI = () => {
 
       newMap.on("click", (e) => {
         const { lat, lng } = e.latlng;
+        console.log("Latitude:", lat);
+        console.log("Longitude:", lng);
 
-        if (marker) {
-          marker.setLatLng([lat, lng]);
+        if (markerRef.current) {
+          // move existing marker
+          markerRef.current
+            .setLatLng([lat, lng])
+            .bindPopup("Thanks for Sharing Your Location")
+            .openPopup();
         } else {
-          const newMarker = L.marker([lat, lng]).addTo(newMap);
-          setMarker(newMarker);
+          // create new marker
+          markerRef.current = L.marker([lat, lng])
+            .addTo(newMap)
+            .bindPopup("Thanks for Sharing Your Location")
+            .openPopup();
         }
       });
 
       mapInstance.current = newMap;
 
-      // 👇 this fixes the "half map" rendering issue
+      // fix half-render issue
       setTimeout(() => {
         newMap.invalidateSize();
       }, 100);
@@ -41,15 +50,17 @@ const AI = () => {
       if (mapInstance.current) {
         mapInstance.current.remove();
         mapInstance.current = null;
+        markerRef.current = null;
       }
     };
-  }, [marker]);
+  }, []);
 
   return (
     <div className="ai-page">
       <Navbar />
       <div className="ai-header">
-        <h1>Click on your exact location from the map below</h1>
+        <h1>Find Nearest Doctor At Your Location</h1>
+        <h4>Click on below map at your location and get nearby doctor list</h4>
       </div>
       <div className="ai-map-container">
         <div className="ai-map" ref={mapRef}></div>
