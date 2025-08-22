@@ -15,6 +15,7 @@ import AI from "./pages/AI";
 import FitAi from "./adv-features/fitai";
 import ListedDoctor from  "./pages/listeddoctor";import Healthcost from "./adv-features/healthcost";
 import Symptompsai from "./adv-features/symptompsai";
+import BMI from "./adv-features/bmi";
 ;
 
 
@@ -38,6 +39,8 @@ function App() {
         <Route path="advanced-features/fitai" element={<FitAi/>}/>
         <Route path="/advanced-features/health-cost-calculator" element={<Healthcost/>}/>
         <Route path="/advanced-features/symptoms-checker-ai" element={<Symptompsai/>}/>
+        <Route path="/advanced-features/symptoms-checker-ai" element={<Symptompsai/>}/>
+        <Route path="/advanced-features/doctor-ai" element={<BMI/>}/>
       </Routes>
   
     
