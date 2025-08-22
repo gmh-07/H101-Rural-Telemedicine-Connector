@@ -4,6 +4,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./AI.css";
 import { FaArrowRight } from "react-icons/fa";
+import axios from "axios";
 
 const AI = () => {
   const mapRef = useRef(null);
@@ -15,7 +16,18 @@ const AI = () => {
 
   const givelist=async(e)=>{
         e.preventDefault();
-    console.log("here aaya")
+    console.log("here inside fn aaya")
+    console.log("ref val",latt.current);
+    console.log("ref val",lang.current);
+
+    const doctorList=await axios.get("http://localhost:3000/user/getlist",{
+       params: {
+        userLattitude: latt.current,
+        userLongitude: lang.current,
+      }
+    })
+
+    console.log("what we recived",doctorList);
 
   }
 
@@ -30,10 +42,12 @@ const AI = () => {
 
       newMap.on("click", (e) => {
         const { lat, lng } = e.latlng;
-        console.log("Latitude:", lat);
-        console.log("Longitude:", lng);
-        latt.current.value=lat;
-        lang.current.value=lng;
+       
+        latt.current=lat;
+        lang.current=lng;
+        console.log("from map we got",lat);
+        console.log("from map we got",lng);
+        
 
         if (markerRef.current) {
           // move existing marker

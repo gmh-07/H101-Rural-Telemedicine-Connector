@@ -33,11 +33,11 @@ const otpSchema=new schema({
 const doctorSchema = new mongoose.Schema({
   name: { type: String, required: true },
   profession: { type: String, required: true },
-  yoe: { type: Number, required: true }, // years of experience
+  yoe: { type: Number, required: true },
   location: { type: String, required: true },
   latitude: { type: Number, required: true },
   longitude: { type: Number, required: true }
-});
+}, { collection: 'doctor' });
 
 
 
