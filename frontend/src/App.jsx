@@ -53,7 +53,6 @@ function App() {
         />
         <Route path="/advanced-features/doctor-ai" element={<BMI />} />
       </Routes>
-      <Footer />
     </>
   );
 }
