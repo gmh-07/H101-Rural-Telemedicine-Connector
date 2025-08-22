@@ -5,6 +5,8 @@ import "leaflet/dist/leaflet.css";
 import "./AI.css";
 import { FaArrowRight } from "react-icons/fa";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 const AI = () => {
   const mapRef = useRef(null);
@@ -12,7 +14,8 @@ const AI = () => {
   const markerRef = useRef(null);
   const latt=useRef(null);
   const lang=useRef(null);
-
+  
+  const navigate=useNavigate();
 
   const givelist=async(e)=>{
         e.preventDefault();
@@ -27,7 +30,12 @@ const AI = () => {
       }
     })
 
-    console.log("what we recived",doctorList);
+    
+
+    // doctorList=doctorList.data.nearestDoctors;
+    if(doctorList){
+       navigate("/listeddoctor",{state:{doctorList:doctorList.data.nearestDoctors}})
+    }
 
   }
 
