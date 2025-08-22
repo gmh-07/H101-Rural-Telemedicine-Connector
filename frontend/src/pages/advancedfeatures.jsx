@@ -10,9 +10,9 @@ const AdvancedFeatures = () => {
   const features = [
     {
   id: 1,
-  title: "Doctor AI",
+  title: "BMI Calculator",
   description: "AI medical assistant that analyzes symptoms, provides health precautions, and suggests appropriate medications for better healthcare decisions 🩺",
-  author: "By healthtech.ai",
+  author: "By agenixsoft.in",
   icon: "🩺", // Medical stethoscope icon
   gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
   route: "/advanced-features/doctor-ai"
@@ -40,12 +40,12 @@ const AdvancedFeatures = () => {
 ,
     {
       id: 4,
-      title: "AI PDF Drive: Chat, Create, Organize",
+      title: "HealthCare Cost Calculator",
       description: "Advanced AI agents for legal and professional work. Upload briefs, contacts and other documents to...",
-      author: "By myaidrive.com",
+      author: "agenixsoft.in",
       icon: "📄",
       gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-      route: "/ai-pdf-drive"
+      route: "/advanced-features/health-cost-calculator"
     }
   ];
 

@@ -27,7 +27,7 @@ const Navbar = () => {
         {/* Center links (desktop) */}
         <ul className="hc-links">
           <li><a href="/" className="hc-link active" onClick={closeMenu}>Home</a></li>
-          <li><a href="/advanced-features" className="hc-link" onClick={closeMenu}>Advanced-Features</a></li>
+          <li><a href="/advanced-features" className="hc-link" onClick={closeMenu}>Advanced-Tools</a></li>
           <li><a href="/doctors" className="hc-link" onClick={closeMenu}>Doctors</a></li>
           <li><a href="/about" className="hc-link" onClick={closeMenu}>About</a></li>
           <li><a href="/contact" className="hc-link" onClick={closeMenu}>Contact</a></li>

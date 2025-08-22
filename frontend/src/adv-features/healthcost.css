@@ -1,0 +1,159 @@
+/* LeetCode-like: clean, airy, white, subtle borders, readable spacing */
+/* All classes prefixed with healthcost- to avoid collisions */
+
+:root {
+  --healthcost-text: #0f172a;
+  --healthcost-subtext: #475569;
+  --healthcost-border: #e5e7eb;
+  --healthcost-soft: #f8fafc;
+  --healthcost-card: #ffffff;
+  --healthcost-accent: #1d4ed8;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.healthcost-wrapper {
+  background: #ffffff;
+  min-height: 100vh;
+  color: var(--healthcost-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+  padding: 24px 12px 48px;
+}
+
+.healthcost-header {
+  max-width: 760px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+.healthcost-title {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.healthcost-subtitle {
+  margin: 0;
+  color: var(--healthcost-subtext);
+  font-size: 14px;
+}
+
+/* Single-column sections stacked */
+.healthcost-section {
+  max-width: 760px;
+  margin: 0 auto 16px;
+}
+
+.healthcost-card {
+  background: var(--healthcost-card);
+  border: 1px solid var(--healthcost-border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.04);
+}
+
+.healthcost-card-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+/* Forms */
+.healthcost-form { display: grid; gap: 12px; }
+.healthcost-form-grid {
+  grid-template-columns: 1fr;
+}
+
+.healthcost-field {
+  display: grid;
+  gap: 6px;
+}
+
+.healthcost-label {
+  font-weight: 600;
+  color: var(--healthcost-text);
+  font-size: 14px;
+}
+
+.healthcost-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--healthcost-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--healthcost-text);
+  outline: none;
+  font-size: 14px;
+}
+.healthcost-input:focus {
+  border-color: #c7d2fe;
+  box-shadow: 0 0 0 3px rgba(99,102,241,.15);
+}
+
+/* Info rows */
+.healthcost-info {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--healthcost-border);
+  display: grid;
+  gap: 8px;
+}
+.healthcost-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--healthcost-subtext);
+}
+.healthcost-info-row strong { color: var(--healthcost-text); }
+
+/* Subsection heading */
+.healthcost-subsection {
+  margin: 16px 0 8px;
+  font-size: 16px;
+}
+
+/* Summary stats */
+.healthcost-summary { display: grid; gap: 10px; }
+.healthcost-stat {
+  display: flex; align-items: center; justify-content: space-between;
+  border: 1px solid var(--healthcost-border);
+  background: var(--healthcost-soft);
+  padding: 12px;
+  border-radius: 10px;
+}
+.healthcost-stat strong { font-size: 16px; }
+.healthcost-muted { color: var(--healthcost-subtext); }
+.healthcost-total {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+/* Details */
+.healthcost-details summary {
+  cursor: pointer;
+  padding: 10px 0;
+  color: var(--healthcost-accent);
+  font-weight: 700;
+}
+.healthcost-break {
+  display: grid; gap: 8px;
+  border: 1px solid var(--healthcost-border);
+  background: var(--healthcost-soft);
+  padding: 12px;
+  border-radius: 10px;
+}
+.healthcost-break > div {
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+/* Note / Disclaimer */
+.healthcost-note, .healthcost-disclaimer {
+  margin-top: 8px;
+  color: var(--healthcost-subtext);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 840px) {
+  .healthcost-title { font-size: 24px; }
+}

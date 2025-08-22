@@ -1,5 +1,6 @@
 // Hero.tsx
 import "./Hero.css";
+import { Link } from "react-router-dom";
 import { FaArrowRight, FaPhone } from "react-icons/fa";
 
 const Hero = () => {
@@ -27,9 +28,11 @@ const Hero = () => {
             Call with Agent
           </button>
 
-          <button className="hero-btn-primary">
+          <Link to="/signup">
+            <button className="hero-btn-primary">
             Sign up here <FaArrowRight size={14} />
           </button>
+          </Link>
         </div>
       </div>
 

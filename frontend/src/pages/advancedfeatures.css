@@ -9,11 +9,13 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 in a row */
   gap: 1.5rem;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
+  margin: 0 auto;
 }
+
 
 .feature-card {
   position: relative;
