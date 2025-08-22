@@ -12,6 +12,7 @@ import Advancedfeatures from "./pages/advancedfeatures";
 import OTP from "./components/otpverify";
 import AI from "./pages/AI";
 import FitAi from "./adv-features/fitai";
+import Doctorai from "./adv-features/doctorai";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/advanced-features" element={<Advancedfeatures/>}/>
         <Route path="/aifeature" element={<AI/>}/>
         <Route path="advanced-features/fitai" element={<FitAi/>}/>
+        <Route path="/advanced-features/doctor-ai" element={<Doctorai/>}/>
       </Routes>
   
     

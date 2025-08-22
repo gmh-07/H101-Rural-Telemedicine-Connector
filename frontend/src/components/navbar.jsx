@@ -31,7 +31,9 @@ const Navbar = () => {
           <li><a href="/doctors" className="hc-link" onClick={closeMenu}>Doctors</a></li>
           <li><a href="/about" className="hc-link" onClick={closeMenu}>About</a></li>
           <li><a href="/contact" className="hc-link" onClick={closeMenu}>Contact</a></li>
-            <li><a href="/aifeature" className="hc-link" onClick={closeMenu}>Explore AI</a></li>
+          <li className="ai-btn"><a href="/aifeature" className="hc-link" onClick={closeMenu}>Nearby Doctors</a></li>
+          
+
         </ul>
         {/* Actions (desktop) */}
         <div className="hc-actions">
