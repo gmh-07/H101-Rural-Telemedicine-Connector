@@ -8,6 +8,7 @@ import Doctors from "@/components/Doctors";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import Marquee from "@/components/Marquee";
 import CircularGallery from "@/components/circulargallery";
+import ImmediateMedicalConsult from "@/components/ImmediateMedicalConsult";
 
 const Home = () => {
   const handleAnimationComplete = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       </div>
       <HowItWorks />
       <Doctors />
+      <ImmediateMedicalConsult />
       <Footer />
     </>
   );

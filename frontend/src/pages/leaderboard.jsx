@@ -171,7 +171,10 @@ const Leaderboard = () => {
             </div> */}
 
             <div className="modal-buttons">
-  <button className="book-btn">Book Now</button>
+  <button 
+    className="book-btn" 
+    onClick={() => window.open("https://cal.com/agenixsoft.in/30min", "_blank")}
+  >Book Now</button>
   <button 
     className="learn-btn" 
     onClick={() => window.open(selectedDoctor.link, "_blank")}
