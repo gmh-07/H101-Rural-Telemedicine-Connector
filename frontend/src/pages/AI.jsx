@@ -3,11 +3,33 @@ import Navbar from "@/components/navbar";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./AI.css";
+import { FaArrowRight } from "react-icons/fa";
+import axios from "axios";
 
 const AI = () => {
   const mapRef = useRef(null);
   const mapInstance = useRef(null);
   const markerRef = useRef(null);
+  const latt=useRef(null);
+  const lang=useRef(null);
+
+
+  const givelist=async(e)=>{
+        e.preventDefault();
+    console.log("here inside fn aaya")
+    console.log("ref val",latt.current);
+    console.log("ref val",lang.current);
+
+    const doctorList=await axios.get("http://localhost:3000/user/getlist",{
+       params: {
+        userLattitude: latt.current,
+        userLongitude: lang.current,
+      }
+    })
+
+    console.log("what we recived",doctorList);
+
+  }
 
   useEffect(() => {
     if (mapRef.current && !mapInstance.current) {
@@ -20,8 +42,12 @@ const AI = () => {
 
       newMap.on("click", (e) => {
         const { lat, lng } = e.latlng;
-        console.log("Latitude:", lat);
-        console.log("Longitude:", lng);
+       
+        latt.current=lat;
+        lang.current=lng;
+        console.log("from map we got",lat);
+        console.log("from map we got",lng);
+        
 
         if (markerRef.current) {
           // move existing marker
@@ -65,6 +91,13 @@ const AI = () => {
       <div className="ai-map-container">
         <div className="ai-map" ref={mapRef}></div>
       </div>
+
+        <div className="btn-div">
+          <button onClick={givelist} className="next-step">
+                     get Doctors<FaArrowRight size={14} />
+            </button>
+        </div>
+    
     </div>
   );
 };

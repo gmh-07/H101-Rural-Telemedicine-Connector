@@ -20,7 +20,7 @@
 }
 
 .ai-map {
-  height: 70vh;  
+  height: 60vh;  
   width: 70vw;    
   border: 2px solid #333;
   border-radius: 12px;
@@ -31,4 +31,32 @@
     width: 100vw;
     height: 50vh;
   }
+}
+
+.next-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* margin-top: px; */
+
+}
+
+.btn-div {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.next-step:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
 }
