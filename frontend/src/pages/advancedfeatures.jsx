@@ -29,14 +29,15 @@ const AdvancedFeatures = () => {
 }
 ,
     {
-      id: 3,
-      title: "Consensus",
-      description: "Ask the research, chat directly with the world's scientific literature. Search references, get simple...",
-      author: "By consensus.app",
-      icon: "🔬",
-      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      route: "/consensus"
-    },
+  id: 3,
+  title: "Symptoms Checker AI",
+  description: "AI-powered symptom analysis in just 3 minutes. Get personalized health reports, doctor recommendations, and treatment guidance developed by medical professionals 🩺",
+  author: "By esabel",
+  icon: "🩺", // Medical stethoscope icon
+  gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+  route: "/advanced-features/symptoms-checker-ai"
+}
+,
     {
       id: 4,
       title: "AI PDF Drive: Chat, Create, Organize",
