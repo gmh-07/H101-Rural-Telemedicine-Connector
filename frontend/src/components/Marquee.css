@@ -1,0 +1,52 @@
+.marquee-container {
+  background: #ffffff; /* Dark bg */
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+/* Common line styling */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0c0c0c;
+}
+
+/* Top line → move right */
+.marquee-right .marquee-track {
+  animation: marquee-right 15s linear infinite;
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Bottom line → move left */
+.marquee-left .marquee-track {
+  animation: marquee-left 15s linear infinite;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track span {
+  padding-right: 3rem; /* gap between text copies */
+}

@@ -1,0 +1,73 @@
+.advancedfeatures-container {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+  text-align: center;
+}
+
+.advancedfeatures-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid #f1f1f1;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #4a6cf7;
+  margin-bottom: 15px;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.feature-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.feature-btn {
+  background: #4a6cf7;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feature-btn:hover {
+  background: #3651d4;
+}

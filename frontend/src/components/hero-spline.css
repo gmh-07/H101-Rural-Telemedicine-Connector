@@ -1,0 +1,22 @@
+.hero-spline-section {
+  padding: 24px 0 64px;
+  background: #ffffff;
+}
+
+.hero-spline-wrap {
+  margin: 0 auto;
+  max-width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.08);
+}
+
+/* Let it scale down on small screens */
+@media (max-width: 1024px) {
+  .hero-spline-wrap {
+    width: 100% !important;
+    height: 60vh !important; /* adjust as desired */
+    min-height: 380px;
+  }
+}

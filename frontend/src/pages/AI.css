@@ -1,0 +1,64 @@
+.ai-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9fafb; /* light background */
+}
+
+.ai-header {
+  margin-top: 90px; /* push below navbar */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ai-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.ai-map {
+  height: 50vh;         /* half screen height */
+  width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.ai-form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ai-input {
+  width: 100%;
+  max-width: 500px;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.ai-btn {
+  width: 100%;
+  max-width: 500px;
+  height: 40px;
+  background: #7643ED;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s ease;
+}
+
+.ai-btn:hover {
+  background: #5b2cb3;
+}

@@ -1,0 +1,195 @@
+/* Section */
+.howit {
+  padding: 64px 0;
+  background: #f8fbff; /* very light blue-tint backdrop close to screenshot */
+}
+
+.howit__container {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+/* Header */
+.howit__header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 32px auto;
+}
+
+.howit__title {
+  margin: 0;
+  font-weight: 800;
+  color: #0b1220;
+  font-size: clamp(28px, 3.8vw, 40px);
+  letter-spacing: -0.01em;
+}
+
+.howit__subtitle {
+  margin-top: 10px;
+  color: #4b5563; /* gray-600 */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Grid of steps */
+.howit__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .howit__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .howit__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card */
+.howit-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e6ecf3;
+  border-radius: 16px;
+  padding: 28px 24px 26px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition: box-shadow 150ms ease, transform 120ms ease;
+  min-height: 260px;
+}
+
+.howit-card:hover {
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.12);
+}
+
+.howit-card:active { transform: translateY(1px); }
+
+.howit-card:focus-within {
+  outline: 2px solid #2bb673;
+  outline-offset: 2px;
+}
+
+/* Icon container with gradient */
+.howit-card__icon {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+.howit-card__iconGrad {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+  opacity: 0.95;
+}
+
+.howit-card__iconGlyph {
+  position: relative;
+  font-size: 34px;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.08));
+}
+
+/* Step badge */
+.howit-card__badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.35);
+}
+
+/* Title & description */
+.howit-card__title {
+  margin: 16px 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b1220;
+}
+
+.howit-card__desc {
+  margin: 0 auto;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 38ch;
+}
+
+/* Divider line connecting cards on xl screens only */
+.howit-card__divider {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .howit-card__divider {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 20px;
+    height: 2px;
+    background: #cfe3f7;
+    transform: translateY(-50%);
+  }
+}
+
+/* CTA */
+.howit__ctaWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.howit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 120ms ease, color 150ms ease;
+}
+
+.howit-btn--primary {
+  background: #0ea5e9;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.35);
+}
+
+.howit-btn--primary:hover {
+  background: #0c92cf;
+  box-shadow: 0 10px 22px rgba(14, 165, 233, 0.4);
+}
+
+.howit-btn--primary:active { transform: translateY(1px); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .howit-card,
+  .howit-btn {
+    transition: none;
+  }
+}

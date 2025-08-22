@@ -1,0 +1,190 @@
+/* Root wrapper */
+.services {
+  position: relative;
+  isolation: isolate;
+  padding: 64px 0;
+}
+
+/* Soft gradient background */
+.services__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #eaf4ff 0%, #ffffff 50%);
+  pointer-events: none;
+}
+
+/* Layout container */
+.services__container {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+/* Header */
+.services__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 32px auto;
+}
+
+.services__title {
+  font-size: clamp(24px, 3.5vw, 34px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.services__subtitle {
+  margin-top: 10px;
+  color: #475569;
+  font-size: 16px;
+}
+
+/* Grid */
+.services__grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card */
+.services-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 150ms ease, transform 120ms ease;
+}
+
+.services-card:hover {
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+}
+
+.services-card:active {
+  transform: translateY(1px);
+}
+
+/* Focus ring when any focus is inside the card */
+.services-card:focus-within {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+}
+
+/* Icon */
+.services-card__icon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 14px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+}
+
+/* Title */
+.services-card__title {
+  margin: 16px 0 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  position: relative;
+}
+
+/* Absolute link area to enlarge focus/hover */
+.services-card__titleLink {
+  position: absolute;
+  inset: -8px;
+  border-radius: 12px;
+  outline: none;
+}
+
+/* Description */
+.services-card__desc {
+  margin-top: 8px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* List */
+.services-card__list {
+  margin: 14px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-card__listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #1f2937;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.services-card__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #10b981;
+  margin-top: 6px;
+}
+
+/* CTA button */
+.services-card__cta {
+  margin-top: 16px;
+}
+
+.services-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 120ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.services-btn--ghost {
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.services-btn--ghost:hover {
+  background: #f8fafc;
+}
+
+.services-btn--ghost:active {
+  transform: translateY(1px);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .services-card,
+  .services-btn {
+    transition: none;
+  }
+}

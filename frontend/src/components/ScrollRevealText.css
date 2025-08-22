@@ -1,0 +1,48 @@
+.scrollreveal {
+  position: relative;
+  background: #0b0b12; /* deep dark like screenshot */
+  overflow: clip;
+  padding: 6vh 0;
+}
+
+.scrollreveal__text {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  line-height: 1.05;
+  font-size: clamp(48px, 9vw, 120px);
+}
+
+/* Foreground (revealed) */
+.scrollreveal__stage {
+  position: relative;
+  z-index: 2;
+  color: #e6e7eb; /* light gray similar to screenshot */
+  display: grid;
+  gap: 2vh;
+  padding: 4vh 2vw;
+}
+
+/* Background (unrevealed) */
+.scrollreveal__ghost {
+  position: absolute;
+  inset: 0;
+  color: #2a2a35; /* dim color */
+  display: grid;
+  gap: 2vh;
+  align-content: center;
+  padding: 4vh 2vw;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Optional inner border preview feel */
+.scrollreveal::after {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}

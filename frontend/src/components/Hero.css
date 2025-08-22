@@ -1,0 +1,113 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    padding: 4rem 6rem;
+  }
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: var(--teal-strong)
+
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  background: #f3f3f3;
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.hero-btn-outline,
+.hero-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;   /* smaller buttons */
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Outline Button */
+.hero-btn-outline {
+  border: 1px solid #ccc;
+  background: transparent;
+  color: #333;
+}
+
+.hero-btn-outline:hover {
+  background: #f8f8f8;
+}
+
+/* Primary Button */
+.hero-btn-primary {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.hero-btn-primary:hover {
+  background: #222;
+}
+
+/* Image box bigger */
+.hero-image {
+  width: 100%;
+  max-width: 500px;   /* bigger than before */
+  height: 400px;      /* bigger */
+  background: #f3f3f3;
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    height: 500px;    /* bigger on large screens */
+  }
+}
+  

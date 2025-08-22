@@ -1,0 +1,32 @@
+.ai-page-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    position: relative; /* Needed for absolute positioning of overlay */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ai-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    display: block;
+    background-color: transparent;
+    box-shadow: 0 0 20px rgba(0, 255, 179, 0.2);
+  }
+  
+  .ai-footer-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    background-color: #212123;
+    z-index: 5;
+    pointer-events: none; /* Prevents it from blocking clicks */
+  }

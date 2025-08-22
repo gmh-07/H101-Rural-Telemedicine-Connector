@@ -1,0 +1,179 @@
+/* Import Poppins to match Signup */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root{
+  --hc-bg: #f9fdfd;
+  --hc-surface: #ffffff;
+  --hc-text: #0a2a33;
+  --hc-muted: #5a6b70;
+  --hc-teal: #19a7ad;
+  --hc-teal-dark: #128088;
+  --hc-border: #e6f0f1;
+  --shadow-md: 0 8px 24px rgba(0, 77, 102, 0.10);
+}
+
+*{ box-sizing: border-box; }
+body{ font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+/* Page container: 100% viewport height, split 65/35 like Signup */
+.auth-page{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: var(--hc-bg);
+}
+
+/* Left media (65%) */
+.auth-media{
+  position: relative;
+  flex: 65%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.auth-media video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional teal overlay and headline for consistency */
+.auth-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 77, 102, 0.45);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 30px;
+}
+
+.auth-overlay h1{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.auth-overlay p{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Right form (35%) */
+.auth-form-wrap{
+  flex: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hc-bg);
+  padding: 30px;
+}
+
+.auth-form{
+  width: 100%;
+  max-width: 380px;
+  background: var(--hc-surface);
+  border: 1px solid var(--hc-border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  padding: 36px 30px;
+}
+
+.auth-form h2{
+  font-size: 26px;
+  color: #004d66;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.subtitle{
+  font-size: 14px;
+  color: var(--hc-muted);
+  margin: 0 0 22px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label{
+  font-size: 14px;
+  color: #004d66;
+  font-weight: 500;
+}
+
+.form-group input{
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid #cfe8ea;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.form-group input:focus{
+  border-color: var(--hc-teal);
+  box-shadow: 0 0 0 3px rgba(25, 167, 173, 0.18);
+}
+
+.form-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 0 16px;
+}
+
+.checkbox{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--hc-muted);
+  font-size: 13px;
+}
+
+.link{
+  color: var(--hc-teal);
+  text-decoration: none;
+  font-weight: 500;
+}
+.link:hover{ color: var(--hc-teal-dark); }
+
+.btn-primary{
+  width: 100%;
+  padding: 12px;
+  background: var(--hc-teal);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background .2s ease, transform .05s ease;
+}
+.btn-primary:hover{ background: var(--hc-teal-dark); }
+.btn-primary:active{ transform: translateY(1px); }
+
+.footnote{
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--hc-muted);
+  text-align: center;
+}
+
+/* Responsive: stack on small screens; keep parity with Signup */
+@media (max-width: 900px){
+  .auth-page{ flex-direction: column; }
+  .auth-media{ flex: none; height: 40vh; }
+  .auth-form-wrap{ flex: none; height: auto; padding: 20px; }
+  .auth-form{ max-width: 100%; }
+  .auth-overlay h1{ font-size: 30px; }
+  .auth-overlay p{ font-size: 16px; }
+}

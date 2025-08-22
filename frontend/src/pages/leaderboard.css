@@ -1,0 +1,233 @@
+.leaderboard-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Podium */
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.podium-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+}
+
+.big {
+  width: 90px;
+  height: 90px;
+  border-color: gold;
+}
+
+.podium-box {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+  position: relative;
+}
+
+.gold {
+  background: #ffe680;
+  height: 160px;
+}
+
+.silver {
+  background: #d9d9d9;
+  height: 120px;
+}
+
+.bronze {
+  background: #f5b7a1;
+  height: 100px;
+}
+
+.place {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.name {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.crown {
+  color: gold;
+  font-size: 24px;
+  position: absolute;
+  top: -25px;
+}
+
+/* Winner Message */
+.winner-msg {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.table-wrapper {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.leaderboard-table th {
+  background: #f2f2f2;
+}
+
+.table-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.table-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+
+
+.leaderboard-h4{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    color: red;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Clickable rows */
+.clickable-row {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.clickable-row:hover {
+  background: #f9f9f9;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.modal-specialty {
+  font-weight: bold;
+  color: #555;
+}
+
+.modal-desc {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.book-btn, .learn-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.book-btn {
+  background: #28a745;
+  color: white;
+}
+.book-btn:hover {
+  background: #218838;
+}
+
+.learn-btn {
+  background: #007bff;
+  color: white;
+}
+.learn-btn:hover {
+  background: #0069d9;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
