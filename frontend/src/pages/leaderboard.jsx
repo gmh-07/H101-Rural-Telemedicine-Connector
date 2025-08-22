@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ScrollVelocity from "@/components/scrollvelocity";
 import CircularGallery from "@/components/circulargallery";
+import Blogs from "@/components/blogs";
 
 // Doctors data
 const doctors = [
@@ -206,6 +207,8 @@ const Leaderboard = () => {
           </div>
         </div>
       )}
+
+      <Blogs/>
 
       <Footer />
     </>
