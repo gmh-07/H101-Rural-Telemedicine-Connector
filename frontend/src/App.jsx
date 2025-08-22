@@ -13,7 +13,9 @@ import Advancedfeatures from "./pages/advancedfeatures";
 import OTP from "./components/otpverify";
 import AI from "./pages/AI";
 import FitAi from "./adv-features/fitai";
-import ListedDoctor from  "./pages/listeddoctor";;
+import ListedDoctor from  "./pages/listeddoctor";import Healthcost from "./adv-features/healthcost";
+import Symptompsai from "./adv-features/symptompsai";
+;
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
         <Route path="/listeddoctor" element={<ListedDoctor/>}/>
         <Route path="/aifeature" element={<AI/>}/>
         <Route path="advanced-features/fitai" element={<FitAi/>}/>
+        <Route path="/advanced-features/health-cost-calculator" element={<Healthcost/>}/>
+        <Route path="/advanced-features/symptoms-checker-ai" element={<Symptompsai/>}/>
       </Routes>
   
     
