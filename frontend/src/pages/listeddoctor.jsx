@@ -35,7 +35,7 @@ export default function ListedDoctor() {
         <div className="listed-cards">
           {currentDoctors.map((doc, index) => (
             <div key={index} className="listed-card">
-              {/* <img  src={doc.img} alt={doc.name} className="listed-card-img" /> */}
+              <img  src={doc.img} alt={doc.name} className="listed-card-img" />
               <h3 className="listed-card-name">{doc.name}</h3>
               <p className="listed-card-info">Experience: {doc.yoe} years</p>
               <p className="listed-card-info">Location: {doc.location}</p>
