@@ -9,6 +9,7 @@ import ScrollRevealText from "@/components/ScrollRevealText";
 import Marquee from "@/components/Marquee";
 import CircularGallery from "@/components/circulargallery";
 import ImmediateMedicalConsult from "@/components/ImmediateMedicalConsult";
+import BigVideo from "@/components/BigVideo"; // ✅ Import Video Component
 
 const Home = () => {
   const handleAnimationComplete = () => {
@@ -21,9 +22,19 @@ const Home = () => {
       <Hero />
       <Marquee />
       <Services />
+
+      {/* ✅ Big Video Section */}
+      <BigVideo
+        src="https://cdn.dribbble.com/userupload/36596768/file/large-7443d14a4ed690cca96c7006ef69a139.mp4"
+        poster="/images/video-poster.jpg"
+        autoplay={false}
+        controls={true}
+        loop={true}
+      />
+
       <div style={{ height: "650px", position: "relative" }}>
-        <CircularGallery bend={0} textColor="#ffffff" borderRadius={0.05} />
-      </div>
+        <CircularGallery bend={0} textColor="#ffffff" borderRadius={0.05} />
+      </div>
       <HowItWorks />
       <Doctors />
       <ImmediateMedicalConsult />
