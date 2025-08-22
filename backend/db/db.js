@@ -36,7 +36,8 @@ const doctorSchema = new mongoose.Schema({
   yoe: { type: Number, required: true },
   location: { type: String, required: true },
   latitude: { type: Number, required: true },
-  longitude: { type: Number, required: true }
+  longitude: { type: Number, required: true },
+  img:{type:String,required:true},
 }, { collection: 'doctor' });
 
 

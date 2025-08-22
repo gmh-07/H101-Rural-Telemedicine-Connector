@@ -33,6 +33,7 @@ const AI = () => {
     
 
     // doctorList=doctorList.data.nearestDoctors;
+    console.log("what we have got",doctorList);
     if(doctorList){
        navigate("/listeddoctor",{state:{doctorList:doctorList.data.nearestDoctors}})
     }

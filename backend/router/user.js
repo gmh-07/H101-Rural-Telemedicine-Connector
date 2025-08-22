@@ -357,7 +357,7 @@ userRouter.get("/getlist", async (req, res) => {
 
         const allDoctors = await Doctormodel.find({});
 
-        console.log("all docotr",allDoctors);
+      //   console.log("all docotr",allDoctors);
 
         // Map doctors with distance from user
         const doctorsWithDistance = allDoctors.map(doc => ({
@@ -367,8 +367,11 @@ userRouter.get("/getlist", async (req, res) => {
             location: doc.location,
             latitude: doc.latitude,
             longitude: doc.longitude,
-            distance: getDistanceFromLatLonInKm(userLat, userLng, doc.latitude, doc.longitude)
+            distance: getDistanceFromLatLonInKm(userLat, userLng, doc.latitude, doc.longitude),
+            img:doc.img
         }));
+
+        console.log("image or not ",doctorsWithDistance);
 
         // Sort by nearest distance
         doctorsWithDistance.sort((a, b) => a.distance - b.distance);
