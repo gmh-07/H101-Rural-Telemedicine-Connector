@@ -1,12 +1,12 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { useState } from "react";
-import { useLocation } from "react-router-dom"; // <-- import this
+import { useLocation } from "react-router-dom";
 import "./listeddoctor.css";
 
 export default function ListedDoctor() {
-  const location = useLocation(); // <-- get location object
-  const doctorsData = location.state?.doctorList || []; // <-- fallback to empty array
+  const location = useLocation();
+  const doctorsData = location.state?.doctorList || [];
 
   console.log("apna data", doctorsData);
 
@@ -35,18 +35,43 @@ export default function ListedDoctor() {
         <div className="listed-cards">
           {currentDoctors.map((doc, index) => (
             <div key={index} className="listed-card">
-              <img  src={doc.img} alt={doc.name} className="listed-card-img" />
+              <img src={doc.img} alt={doc.name} className="listed-card-img" />
               <h3 className="listed-card-name">{doc.name}</h3>
               <p className="listed-card-info">Experience: {doc.yoe} years</p>
               <p className="listed-card-info">Location: {doc.location}</p>
               <p className="listed-card-info">Profession: {doc.profession}</p>
+
+              {/* 🔥 Book Now Button */}
+              <a
+                href="https://cal.com/agenixsoft.in/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="listed-card-btn"
+              >
+                Book Now
+              </a>
             </div>
           ))}
         </div>
+
         <div className="listed-pagination">
-          <button className="listed-btn" onClick={prevPage} disabled={currentPage === 1}>Prev</button>
-          <span className="listed-page">{currentPage} / {totalPages}</span>
-          <button className="listed-btn" onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
+          <button
+            className="listed-btn"
+            onClick={prevPage}
+            disabled={currentPage === 1}
+          >
+            Prev
+          </button>
+          <span className="listed-page">
+            {currentPage} / {totalPages}
+          </span>
+          <button
+            className="listed-btn"
+            onClick={nextPage}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
         </div>
       </div>
       <Footer />
