@@ -3,11 +3,21 @@ import Navbar from "@/components/navbar";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./AI.css";
+import { FaArrowRight } from "react-icons/fa";
 
 const AI = () => {
   const mapRef = useRef(null);
   const mapInstance = useRef(null);
   const markerRef = useRef(null);
+  const latt=useRef(null);
+  const lang=useRef(null);
+
+
+  const givelist=async(e)=>{
+        e.preventDefault();
+    console.log("here aaya")
+
+  }
 
   useEffect(() => {
     if (mapRef.current && !mapInstance.current) {
@@ -22,6 +32,8 @@ const AI = () => {
         const { lat, lng } = e.latlng;
         console.log("Latitude:", lat);
         console.log("Longitude:", lng);
+        latt.current.value=lat;
+        lang.current.value=lng;
 
         if (markerRef.current) {
           // move existing marker
@@ -65,6 +77,13 @@ const AI = () => {
       <div className="ai-map-container">
         <div className="ai-map" ref={mapRef}></div>
       </div>
+
+        <div className="btn-div">
+          <button onClick={givelist} className="next-step">
+                     get Doctors<FaArrowRight size={14} />
+            </button>
+        </div>
+    
     </div>
   );
 };

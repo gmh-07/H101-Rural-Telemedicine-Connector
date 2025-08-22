@@ -30,6 +30,19 @@ const otpSchema=new schema({
     createdAt: { type: Date, expires: '5m', default: Date.now }
 })
 
+const doctorSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  profession: { type: String, required: true },
+  yoe: { type: Number, required: true }, // years of experience
+  location: { type: String, required: true },
+  latitude: { type: Number, required: true },
+  longitude: { type: Number, required: true }
+});
+
+
+
+const Doctormodel = mongoose.model("Doctor", doctorSchema);
+
 
 const usermodel=mongoose.model("users",userSchema);
  const otpmodel=mongoose.model("otps",otpSchema);
@@ -37,5 +50,6 @@ const usermodel=mongoose.model("users",userSchema);
 
 module.exports={
     userModel:usermodel,
-    otpmodel:otpmodel
+    otpmodel:otpmodel,
+    Doctormodel:Doctormodel
 }
