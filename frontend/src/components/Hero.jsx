@@ -19,9 +19,9 @@ const Hero = () => {
         <div className="hero-buttons">
           <button
             className="hero-btn-outline"
-            data-cal-namespace="agenixsoft"
-            data-cal-link="agenixsoft.in/30min" // use slug, not a domain
-            data-cal-config='{"layout":"month_view","theme":"light"}'
+            onClick={() =>
+                  window.open("https://cal.com/agenixsoft.in/30min", "_blank")
+                }
           >
             <FaPhone size={14} style={{ marginRight: 6 }} />
             Call with Agent
