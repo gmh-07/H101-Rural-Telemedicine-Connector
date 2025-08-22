@@ -22,7 +22,7 @@ const Loader = ({ onFinish }) => {
           exit={{ opacity: 0 }}
         >
           <div className="spinner"></div>
-          <h1>Loading...</h1>
+          <h1>HealthCare+</h1>
         </motion.div>
       )}
     </AnimatePresence>
