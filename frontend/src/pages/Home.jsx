@@ -9,7 +9,9 @@ import ScrollRevealText from "@/components/ScrollRevealText";
 import Marquee from "@/components/Marquee";
 import CircularGallery from "@/components/circulargallery";
 import ImmediateMedicalConsult from "@/components/ImmediateMedicalConsult";
-import BigVideo from "@/components/BigVideo"; // ✅ Import Video Component
+import BigVideo from "@/components/BigVideo"; 
+import img from "../assets/image.png"
+import "./home.css"
 
 const Home = () => {
   const handleAnimationComplete = () => {
@@ -36,6 +38,7 @@ const Home = () => {
         <CircularGallery bend={0} textColor="#ffffff" borderRadius={0.05} />
       </div>
       <HowItWorks />
+      <img className="imgInHome" src={img}></img>
       <Doctors />
       <ImmediateMedicalConsult />
       <Footer />

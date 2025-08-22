@@ -16,7 +16,7 @@ const BLOGS = [
   },
   {
     title: 'Blog 4',
-    url: 'https://example.com/blog-4',
+    url: 'https://www.elcaminohealth.org/stay-healthy/blog/gentlemen-call-your-doctor',
   },
 ];
 
@@ -24,6 +24,7 @@ const Blogs = () => {
   return (
     <div className="blogs-wrapper">
       <header className="blogs-header">
+        <h2 className="blogs-title">If you are Reading Enthusiast , You can Explore this Section as well !</h2>
         <h1 className="blogs-title">Blogs</h1>
         <p className="blogs-subtitle">
           A clean, minimal reading wall. View posts directly on this page.
