@@ -20,16 +20,18 @@ const Hero = () => {
           <button
             className="hero-btn-outline"
             data-cal-namespace="agenixsoft"
-            data-cal-link="agenixsoft.in/30min"  // use slug, not a domain
+            data-cal-link="agenixsoft.in/30min" // use slug, not a domain
             data-cal-config='{"layout":"month_view","theme":"light"}'
           >
             <FaPhone size={14} style={{ marginRight: 6 }} />
             Call with Agent
           </button>
 
-          <button className="hero-btn-primary">
-            Sign up here <FaArrowRight size={14} />
-          </button>
+          <a href="/signup" style={{ textDecoration: "none" }}>
+            <button className="hero-btn-primary">
+              Sign up here <FaArrowRight size={14} />
+            </button>
+          </a>
         </div>
       </div>
 

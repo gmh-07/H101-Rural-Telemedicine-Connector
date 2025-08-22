@@ -1,0 +1,92 @@
+/* Container */
+.listed-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.listed-title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Cards wrapper */
+.listed-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Card styles */
+.listed-card {
+  background: #fff;
+  padding: 1rem;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.listed-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Card image */
+.listed-card-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Card text */
+.listed-card-name {
+  margin-bottom: 0.5rem;
+  color: #007BFF;
+}
+
+.listed-card-info {
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+/* Pagination */
+.listed-pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listed-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.listed-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.listed-btn:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.listed-page {
+  font-weight: bold;
+}
